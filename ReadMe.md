@@ -7,6 +7,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/sanjusss/aliyun-ddns.svg)](https://github.com/sanjusss/aliyun-ddns/network)
 [![GitHub stars](https://img.shields.io/github/stars/sanjusss/aliyun-ddns.svg)](https://github.com/sanjusss/aliyun-ddns/stargazers)
 
+copy自sanjusss项目。支持多网卡ipv6本地地址获取，修改本地地址过滤
+
 # 功能
 - 通过在线API获取公网IPv4/v6地址，更新到域名A/AAAA记录。
 - 通过本地网卡获取公网或内网IPv4/v6地址，更新到域名A/AAAA记录。
