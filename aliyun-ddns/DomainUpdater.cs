@@ -241,8 +241,11 @@ namespace aliyun_ddns
         {
             //var clientProfile = DefaultProfile.GetProfile(Options.Instance.ENDPOINT, Options.Instance.AKID, Options.Instance.AKSCT);
             //return new DefaultAcsClient(clientProfile);
-            return new DefaultAcsClient(DefaultProfile.GetProfile(),
+            DefaultAcsClient defaultAcsClient = new DefaultAcsClient(DefaultProfile.GetProfile(),
                 new Aliyun.Acs.Core.Auth.BasicCredentials(Options.Instance.Akid, Options.Instance.Aksct));
+            defaultAcsClient.SetConnectTimeoutInMilliSeconds(20000);
+            defaultAcsClient.SetReadTimeoutInMilliSeconds(20000);
+            return defaultAcsClient;  
         }
 
         /// <summary>
