@@ -62,7 +62,7 @@ namespace aliyun_ddns.IPGetter
 
                                 if (success)
                                 {
-                                    ip = i.Address.ToString();
+                                    ip = i.Address.ToString().Split("%")[0];
                                 }
                             }
                         }
