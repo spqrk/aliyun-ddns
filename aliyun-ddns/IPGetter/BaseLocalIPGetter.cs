@@ -44,8 +44,12 @@ namespace aliyun_ddns.IPGetter
                             //获取单播地址集
                             UnicastIPAddressInformationCollection ips = properties.UnicastAddresses;
                             foreach (UnicastIPAddressInformation i in ips)
-                            {
+                            {   
                                 if (CheckIPAddressInformation(i) == false)
+                                {
+                                    continue;
+                                }
+                                if(i.Address.ToString().Contains("fe80"))
                                 {
                                     continue;
                                 }
